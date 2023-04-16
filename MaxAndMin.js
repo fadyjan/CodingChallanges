@@ -33,3 +33,23 @@ console.log(Math.max(...arr))*/
     return maxval
 }
  console.log(max([10,20,-20,0,99]))*/
+
+
+//5 Write a function to convert a name into initials. This kata strictly takes two words with one space in between them.
+
+/*let NameAsString = 'Sam Harris'
+let NameAsArray = NameAsString.split(" ")
+let initialName = NameAsArray[0][0].toUpperCase() + "." + NameAsArray[1][0].toUpperCase()
+console.log(initialName)*/
+
+
+//6 This kata is about multiplying a given number by eight if it is an even number and by nine otherwise.
+/*var num = 7
+if (num % 2 === 0) {
+    //number is even
+    num = num *8
+} else {
+    //number is odd 
+    num = num *9
+}*/
+

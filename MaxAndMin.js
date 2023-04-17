@@ -66,9 +66,28 @@ console.log(invert([]));
 */
 
 //9 Write a function that takes an array of words and smashes them together into a sentence and returns the sentence. You can ignore any need to sanitize words or add punctuation, but you should add spaces between each word. Be careful, there shouldn't be a space at the beginning or the end of the sentence!
-function smash (words) {
+/*function smash (words) {
   var str = words.join(" ")
     return str
  };
 
- smash([])
+ smash([])*/
+
+ //10 Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+
+
+ function sumArray(array) {
+    //Sort the array so i can remove the most and least values from it latter 
+   array= array.sort(function(a, b){return a-b})
+
+   array.shift()
+   array.pop()
+
+   let sumArry = array.reduce((result,item)=>{
+    return result + item;
+   },0)
+
+   console.log(sumArry)
+ }
+
+ sumArray([ -6, -20, -1, -10, -12 ])

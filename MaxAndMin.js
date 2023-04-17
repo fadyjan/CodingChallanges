@@ -73,10 +73,9 @@ console.log(invert([]));
 
  smash([])*/
 
- //10 Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
+//10 Sum all the numbers of a given array ( cq. list ), except the highest and the lowest element ( by value, not by index! ).The highest or lowest element respectively is a single element at each edge, even if there are more than one with the same value.
 
-
- function sumArray(array) {
+/* function sumArray(array) {
     //Sort the array so i can remove the most and least values from it latter 
    array= array.sort(function(a, b){return a-b})
 
@@ -90,4 +89,25 @@ console.log(invert([]));
    console.log(sumArry)
  }
 
- sumArray([ -6, -20, -1, -10, -12 ])
+ sumArray([ -6, -20, -1, -10, -12 ])*/
+
+//11 Given an array of integers, return a new array with each value doubled.
+/*function maps(arr){
+    let doubledArr = arr.map(el=>{return el*2})
+    return doubledArr
+}*/
+
+//12 A hero is on his way to the castle to complete his mission. However, he's been told that the castle is surrounded with a couple of powerful dragons! each dragon takes 2 bullets to be defeated, our hero has no idea how many bullets he should carry.. Assuming he's gonna grab a specific given number of bullets and move forward to fight another specific given number of dragons, will he survive?Return True if yes, False otherwise :)
+
+/*function hero(bullets, dragons) {
+  //Get Coding!
+  let requiredBullets = dragons * 2;
+  if (bullets >=requiredBullets) {
+    return true
+  } else {
+    return false
+  }
+ 
+}
+
+hero(10, 5)*/

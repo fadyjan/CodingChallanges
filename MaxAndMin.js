@@ -111,3 +111,46 @@ console.log(invert([]));
 }
 
 hero(10, 5)*/
+
+//13 In this simple assignment you are given a number and have to make it negative. But maybe the number is already negative?
+
+/*function makeNegative(num) {
+    // Code
+    if(num > 0 ){
+        return num *-1
+
+    }else return num 
+}*/
+
+//14 Given an array of integers your solution should find the smallest integer.
+/*function findSmallestInt(arr) {
+   return Math.min(...arr)
+}
+
+console.log(findSmallestInt([78,56,232,12,8]))*/
+
+//15 You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.For example, when the input is green, output should be yellow.
+function updateLight(current) {
+  var nextColor;
+  switch (current) {
+    case "green":
+      nextColor = "yellow";
+      break;
+
+    case "yellow":
+      nextColor = "red";
+      break;
+    case "red":
+      nextColor = "green";
+      break;
+
+    default:
+      break;
+  }
+  return  nextColor
+}
+console.log(updateLight("green"))
+
+const updateLight2 = current => ({green: 'yellow',yellow: 'red',red: 'green',})[current]
+
+console.log(updateLight2("green"))

@@ -130,7 +130,7 @@ hero(10, 5)*/
 console.log(findSmallestInt([78,56,232,12,8]))*/
 
 //15 You're writing code to control your town's traffic lights. You need a function to handle each change from green, to yellow, to red, and then to green again.Complete the function that takes a string as an argument representing the current state of the light and returns a string representing the state the light should change to.For example, when the input is green, output should be yellow.
-function updateLight(current) {
+/* function updateLight(current) {
   var nextColor;
   switch (current) {
     case "green":
@@ -149,8 +149,26 @@ function updateLight(current) {
   }
   return  nextColor
 }
-console.log(updateLight("green"))
+console.log(updateLight("green")) */
 
-const updateLight2 = current => ({green: 'yellow',yellow: 'red',red: 'green',})[current]
 
-console.log(updateLight2("green"))
+/*     function UpdateLight(current){
+     var next ={green: 'yellow',yellow: 'red',red: 'green'}[current]
+     return next
+    } */
+
+
+//16 Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
+
+/* var summation = function (num) {
+    // Code here
+    var initialNum = 1 ;
+    var sum = 0
+    for (let x = 0; x <= num; x++) {
+        sum = sum+x
+        
+    }
+}
+
+
+console.log(summation(8))  */

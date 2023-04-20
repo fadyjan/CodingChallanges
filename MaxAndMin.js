@@ -174,7 +174,7 @@ console.log(updateLight("green")) */
 console.log(summation(8))  */
 //17 We need to write a function that takes this collection and returns the number of points our team (x) got in the championship by the rules given above.
 
-function points(games) {
+/* function points(games) {
   var TotalPoints =  0;
   games.forEach(game => {
       let match = game.split(':')
@@ -188,4 +188,14 @@ function points(games) {
   return TotalPoints
 }
 
-console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]))
+console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"])) */
+
+
+//18 Given an integral number, determine if it's a square number:
+/* var isSquare = function(n){
+    if (n<0) {
+      return false
+    } else{
+     return Number.isInteger(Math.sqrt(n))
+    } 
+} */

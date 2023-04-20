@@ -199,3 +199,25 @@ console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]
      return Number.isInteger(Math.sqrt(n))
     } 
 } */
+
+//19 Consider an array/list of sheep where some sheep may be missing from their place. We need a function that counts the number of sheep present in the array (true means present).
+/* function countSheeps(arrayOfSheep) {
+ let trueValues =  arrayOfSheep.filter((element)=>{ return element === true})
+ return trueValues.length
+} */
+
+//20 You are going to be given a word. Your job is to return the middle character of the word. If the word's length is odd, return the middle character. If the word's length is even, return the middle 2 characters.
+
+/*  function getMiddle(s){
+  // detect first if the number of letters is odd or even 
+  debugger
+    if (s.length % 2 === 0) {    // If num is divisible by 2
+      return s[(s.length/2)-1] + s[(s.length/2)]  
+    } else {
+     return s[Math.round(s.length)-1]
+    }
+  
+
+}
+
+console.log( getMiddle("test")) */

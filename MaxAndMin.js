@@ -260,3 +260,25 @@ console.log( getMiddle("test")) */
 }
 
 console.log(number([[10,0],[3,5],[5,8]])) */
+
+//23 Remove first char concat it with 'ay' then add them to the end of string
+function pigIt(str){
+  let wordsArray = str.split(" ")
+  const regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
+
+let newArray =  wordsArray.map((word)=>{
+  if (regex.test(word)) {
+    let firstChar = word.charAt(0)
+    let AfterRemoving = word.slice(1)
+    let finalWord = AfterRemoving + firstChar + 'ay'
+    return finalWord
+  } else {
+    return word
+  }
+
+  })
+  return newArray.join(" ")
+  //Code here
+}
+
+pigIt('Pig latin is cool')

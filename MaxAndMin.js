@@ -151,12 +151,10 @@ console.log(findSmallestInt([78,56,232,12,8]))*/
 }
 console.log(updateLight("green")) */
 
-
 /*     function UpdateLight(current){
      var next ={green: 'yellow',yellow: 'red',red: 'green'}[current]
      return next
     } */
-
 
 //16 Write a program that finds the summation of every number from 1 to num. The number will always be a positive integer greater than 0.
 
@@ -190,7 +188,6 @@ console.log(summation(8))  */
 
 console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"])) */
 
-
 //18 Given an integral number, determine if it's a square number:
 /* var isSquare = function(n){
     if (n<0) {
@@ -221,7 +218,6 @@ console.log(points(["1:0","2:0","3:0","4:0","2:1","3:1","4:1","3:2","4:2","4:3"]
 }
 
 console.log( getMiddle("test")) */
-
 
 //21 Make a program that filters a list of strings and returns a list with only your friends name in it.If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours! Otherwise, you can be sure he's not...
 
@@ -262,7 +258,7 @@ console.log( getMiddle("test")) */
 console.log(number([[10,0],[3,5],[5,8]])) */
 
 //23 Remove first char concat it with 'ay' then add them to the end of string
-function pigIt(str){
+/* function pigIt(str){
   let wordsArray = str.split(" ")
   const regex = /[ `!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
 
@@ -281,4 +277,31 @@ let newArray =  wordsArray.map((word)=>{
   //Code here
 }
 
-pigIt('Pig latin is cool')
+pigIt('Pig latin is cool') */
+
+//24 Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
+
+
+
+// function inArray(array1, array2) {
+//   let selectedArray = [];
+//   array1.map((subStr) => {
+//     array2.map((mainStr) => {
+//       if (mainStr.includes(subStr) && !selectedArray.includes(subStr)) {
+//           selectedArray.push(subStr);
+//       }
+//     });
+//   });
+//   return selectedArray.sort();
+// }
+
+// a2 = ["lively", "alive", "harp", "sharp", "armstrong"];
+
+// a1 = ["xyz", "live", "strong"];
+// console.log(inArray(a1, a2));
+
+// a1 = ["live", "strong", "arp"]
+// inArray(a1, a2)
+
+// a1 = ["tarp", "mice", "bull"]
+// inArray(a1, a2)

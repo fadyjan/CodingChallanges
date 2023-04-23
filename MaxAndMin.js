@@ -281,8 +281,6 @@ pigIt('Pig latin is cool') */
 
 //24 Given two arrays of strings a1 and a2 return a sorted array r in lexicographical order of the strings of a1 which are substrings of strings of a2.
 
-
-
 // function inArray(array1, array2) {
 //   let selectedArray = [];
 //   array1.map((subStr) => {
@@ -305,3 +303,21 @@ pigIt('Pig latin is cool') */
 
 // a1 = ["tarp", "mice", "bull"]
 // inArray(a1, a2)
+
+//25 Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
+
+
+
+// function digPow(n, p) {
+//   currentPower = p;
+//   const digits = n.toString().split("").map(Number);
+//   let FinalResult = 0;
+//   digits.map((number) => {
+//     FinalResult = FinalResult + (number ** currentPower)
+//     currentPower++;
+//   });  
+//   return Number.isInteger(FinalResult / n) ? FinalResult / n : -1;
+// }
+// console.log(digPow(89, 1)) 
+// console.log(digPow(92, 1))
+// console.log(digPow(46288, 3)) 

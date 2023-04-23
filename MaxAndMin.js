@@ -1,5 +1,3 @@
-debugger;
-
 //1 Get Min Value using OneLine
 /* var arr = [10,20,30,-2,-30,0]
 console.log(Math.min(...arr))*/
@@ -321,3 +319,15 @@ pigIt('Pig latin is cool') */
 // console.log(digPow(89, 1)) 
 // console.log(digPow(92, 1))
 // console.log(digPow(46288, 3)) 
+
+//26  In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
+
+
+
+// function filter_list(l) {
+//   // Return a new array with the strings filtered out
+//   let filteredArray = l.filter((el)=>{return typeof(el) === 'number'})
+//   return filteredArray
+// }
+
+// filter_list([1,2,'a','b'])

@@ -304,8 +304,6 @@ pigIt('Pig latin is cool') */
 
 //25 Is there an integer k such as : (a ^ p + b ^ (p+1) + c ^(p+2) + d ^ (p+3) + ...) = n * k
 
-
-
 // function digPow(n, p) {
 //   currentPower = p;
 //   const digits = n.toString().split("").map(Number);
@@ -313,16 +311,14 @@ pigIt('Pig latin is cool') */
 //   digits.map((number) => {
 //     FinalResult = FinalResult + (number ** currentPower)
 //     currentPower++;
-//   });  
+//   });
 //   return Number.isInteger(FinalResult / n) ? FinalResult / n : -1;
 // }
-// console.log(digPow(89, 1)) 
+// console.log(digPow(89, 1))
 // console.log(digPow(92, 1))
-// console.log(digPow(46288, 3)) 
+// console.log(digPow(46288, 3))
 
 //26  In this kata you will create a function that takes a list of non-negative integers and strings and returns a new list with the strings filtered out.
-
-
 
 // function filter_list(l) {
 //   // Return a new array with the strings filtered out
@@ -331,3 +327,70 @@ pigIt('Pig latin is cool') */
 // }
 
 // filter_list([1,2,'a','b'])
+
+//Linked List
+
+// const linkedList = {
+//   head: {
+//     values: 6,
+//     next: {
+//       value: 8,
+//       next: {
+//         value: 10,
+//         next: {
+//           values: 12,
+//           next: null,
+//         },
+//       },
+//     },
+//   },
+// };
+
+// class linkedList {
+//   constructor(head = null) {
+//     this.head = head;
+//   }
+
+//   size() {
+//     let counter = 0;
+
+//     while (this.head) {
+//       counter++;
+//       this.head = this.head.next;
+//     }
+//     return counter;
+//   }
+
+//   clear() {
+//     this.head = null;
+//   }
+
+//   getLast() {
+//     LastNode = this.head;
+//     if (LastNode.next) {
+//       while (LastNode.next) {
+//         LastNode = LastNode.next;
+//       }
+//     }
+//     return LastNode;
+//   }
+
+//   getFirst() {
+//     return this.head;
+//   }
+// }
+
+// class ListNode {
+//   constructor(data) {
+//     this.data = this.data;
+//     this.next = null;
+//   }
+// }
+
+// //Create Some Nodes instance
+// let n1 = new ListNode(2);
+// let n2 = new ListNode(4);
+// n1.next = n2;
+// //Create One LinkedList to hold these nodes
+
+// let Linkedlist = new linkedList(n1);

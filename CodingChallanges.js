@@ -394,3 +394,67 @@ pigIt('Pig latin is cool') */
 // //Create One LinkedList to hold these nodes
 
 // let Linkedlist = new linkedList(n1);
+
+
+
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+// You can return the answer in any order.
+
+// function AddUp(intarray,target) {
+//   let flag,firstElement,substract
+
+//   for (x = 0; x < intarray.length; x++) {
+
+//     firstElement = intarray[x]
+//     substract = target - firstElement
+
+//     flag = intarray.includes(substract)
+
+//     if (flag) {
+//       break
+//     }
+
+//   }
+
+//   if(flag){
+//     return [firstElement,substract]
+//   }else{
+//     return "this compination can't be done "
+//   }
+
+// }
+
+// console.log(AddUp([1,2,3,4],6))
+
+//Reverse an array(String) by using only loops
+
+// function ReverseArray(str) {
+//   let ReversedStr = ''
+
+//   for (let x = str.length - 1; x >= 0; x--) {
+//     ReversedStr = ReversedStr + str[x]
+
+//   }
+//   return String(ReversedStr)
+
+// }
+
+// console.log(ReverseArray('ydaf'))
+
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+// function findDuplicate(arr) {
+
+//   for (let x = 0; x < arr.length; x++) { // O(n)
+//     for (let i = x +1; i < arr.length; i++) { //O(n)
+//       if (arr[i] === arr[x]) {
+//         return true
+//       }
+//     }
+
+//   }
+//   return false
+// }
+// //O(n^2)
+// console.log(findDuplicate([1, 2, 3,1]));

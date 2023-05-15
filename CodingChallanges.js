@@ -491,4 +491,32 @@ pigIt('Pig latin is cool') */
 // const arr1 = ["a", "b", "c", 3];
 // const arr2 = ["am", "bb", 3, "dd"];
 
-console.log(CompareArrays(arr1, arr2));
+// console.log(CompareArrays(arr1, arr2));
+
+// Do Array from scratch 
+// class MyArray {
+//   constructor(){
+//     this.length = 0
+//     this.data = {}
+//   }
+
+//   get(index){
+//   return this.data[index]    
+//   }
+
+//   push(item){
+//       this.data[this.length] = item
+//       this.length ++
+//   }
+
+//   pop(){
+//     delete this.data[this.length-1]
+//     this.length --
+//   }
+// }
+
+// arr = new MyArray()
+// arr.push("hello")
+// arr.push('HI')
+
+// console.log(arr.length)

@@ -457,10 +457,10 @@ pigIt('Pig latin is cool') */
 // //O(n^2)
 // console.log(findDuplicate([1, 2, 3,1]));
 
-//given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
+// given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
 
 // function CompareArrays(arr1, arr2) {
-//   const ComparedArray = arr1.filter((element) => arr2.includes(element));
+//    ComparedArray = arr1.filter((element) => arr2.includes(element));
 //   if(ComparedArray.length > 0){
 //     return true
 //   }else{
@@ -469,6 +469,26 @@ pigIt('Pig latin is cool') */
 // }
 
 // const arr1 = ["a", "b", "c", 3];
-// const arr2 = ["am", "bb", 31, "dd"];
+// const arr2 = ["a", "bb", 3, "dd"];
 
-// console.log(CompareArrays(arr1, arr2));
+// console.log(CompareArrays(arr1, arr2)); // But this Soultion is COmplixity of O(arr1*arr2)
+//So let't try another solution 
+
+// function CompareArrays(arr1, arr2) {
+// //Convert one array into object
+// let mapObject = {}
+// arr1.map((element) =>{
+//   if (!mapObject[element]) {
+//     mapObject[element] = element
+//   }
+// })
+
+// let filteredArr = arr2.filter((element)=>mapObject[element])
+
+// return filteredArr
+// }
+
+// const arr1 = ["a", "b", "c", 3];
+// const arr2 = ["am", "bb", 3, "dd"];
+
+console.log(CompareArrays(arr1, arr2));

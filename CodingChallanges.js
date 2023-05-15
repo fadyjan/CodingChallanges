@@ -395,8 +395,6 @@ pigIt('Pig latin is cool') */
 
 // let Linkedlist = new linkedList(n1);
 
-
-
 // Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 // You may assume that each input would have exactly one solution, and you may not use the same element twice.
 // You can return the answer in any order.
@@ -458,3 +456,19 @@ pigIt('Pig latin is cool') */
 // }
 // //O(n^2)
 // console.log(findDuplicate([1, 2, 3,1]));
+
+//given 2 arrays, create a function that let's a user know (true/false) whether these two arrays contain any common items
+
+// function CompareArrays(arr1, arr2) {
+//   const ComparedArray = arr1.filter((element) => arr2.includes(element));
+//   if(ComparedArray.length > 0){
+//     return true
+//   }else{
+//     return false
+//   }
+// }
+
+// const arr1 = ["a", "b", "c", 3];
+// const arr2 = ["am", "bb", 31, "dd"];
+
+// console.log(CompareArrays(arr1, arr2));

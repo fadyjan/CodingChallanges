@@ -520,3 +520,11 @@ pigIt('Pig latin is cool') */
 // arr.push('HI')
 
 // console.log(arr.length)
+
+//Reverse string
+// function Reverse(str){
+//   return str.split("").reverse().join('')
+
+// }
+// var str = "Hello"
+// console.log(Reverse(str));

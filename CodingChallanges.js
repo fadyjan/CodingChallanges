@@ -521,10 +521,26 @@ pigIt('Pig latin is cool') */
 
 // console.log(arr.length)
 
-//Reverse string
+//30 Reverse string
 // function Reverse(str){
 //   return str.split("").reverse().join('')
 
 // }
 // var str = "Hello"
 // console.log(Reverse(str));
+
+//31 Merge Sorted array 
+// const arr1 = ['apple', 'banana', 'cherry'];
+// const arr2 = ['date', 'elderberry', 'fig'];
+// const arr3 = ['grape', 'honeydew'];
+// const mergedStrArray = arr1.concat(arr2)
+
+// const a = [1,5,8,9]
+// const b = [2,9,4,8]
+// //Ascending
+// const mergedAscArray = a.concat(b).sort((x,y)=> x+y)
+
+// //Desending
+// const mergedDescArray = a.concat(b).sort((x,y)=> y-x)
+
+// console.log(mergedStrArray);

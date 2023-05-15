@@ -624,3 +624,12 @@ pigIt('Pig latin is cool') */
 // };
 
 // console.log(containsDuplicate([1,2,3,1]))
+
+// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+
+// var rotate = function(nums, k) {
+//     var RotatedElement = nums.splice(nums.length-k ,k)
+//     return RotatedElement.concat(nums)
+//   };
+
+// console.log(rotate([-1,-100,3,99] ,2))

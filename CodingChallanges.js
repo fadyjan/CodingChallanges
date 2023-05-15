@@ -472,7 +472,7 @@ pigIt('Pig latin is cool') */
 // const arr2 = ["a", "bb", 3, "dd"];
 
 // console.log(CompareArrays(arr1, arr2)); // But this Soultion is COmplixity of O(arr1*arr2)
-//So let't try another solution 
+//So let't try another solution
 
 // function CompareArrays(arr1, arr2) {
 // //Convert one array into object
@@ -493,7 +493,7 @@ pigIt('Pig latin is cool') */
 
 // console.log(CompareArrays(arr1, arr2));
 
-// Do Array from scratch 
+// Do Array from scratch
 // class MyArray {
 //   constructor(){
 //     this.length = 0
@@ -501,7 +501,7 @@ pigIt('Pig latin is cool') */
 //   }
 
 //   get(index){
-//   return this.data[index]    
+//   return this.data[index]
 //   }
 
 //   push(item){
@@ -529,7 +529,7 @@ pigIt('Pig latin is cool') */
 // var str = "Hello"
 // console.log(Reverse(str));
 
-//31 Merge Sorted array 
+//31 Merge Sorted array
 // const arr1 = ['apple', 'banana', 'cherry'];
 // const arr2 = ['date', 'elderberry', 'fig'];
 // const arr3 = ['grape', 'honeydew'];
@@ -544,3 +544,83 @@ pigIt('Pig latin is cool') */
 // const mergedDescArray = a.concat(b).sort((x,y)=> y-x)
 
 // console.log(mergedStrArray);
+
+// Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+// You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+// You can return the answer in any order.
+
+// function twoSum(nums, target) {
+//   for (let index = 0; index < nums.length; index++) {
+//     let numberNedded = target - nums[index];
+//     notMe = index != nums.indexOf(numberNedded);
+//     if (nums.includes(numberNedded) && notMe) {
+//       return [index, nums.indexOf(numberNedded)];
+//     }
+//   }
+
+//   return [];
+// }
+
+// function twoSum(nums, target) {
+//   debugger
+//   const object = {}
+
+//   for (let index = 0; index < nums.length; index++) {
+//     const Complimentry = target - nums[index]
+
+//     if (Complimentry in object) {
+//       return [ object[Complimentry] ,index]
+//     }
+
+//     object[nums[index]] = index
+
+//   }
+
+//   // If no solution is found, return an empty array
+//   return [];
+// }
+// let nums = [3, 2, 4],
+//   target = 6;
+// console.log(twoSum(nums, target));
+
+//32 Given an integer array nums, find the subarray with the largest sum, and return its sum.
+
+// function getMaxSum(arr) {
+//   arr = arr.sort();
+ 
+//   const SortedSet =new Set(arr);
+//   const filtredArray = [...SortedSet]
+//   return filtredArray[filtredArray.length - 1] + filtredArray[filtredArray.length - 2];
+// }
+
+// console.log(getMaxSum([5,4,-1,7,8]));
+
+// Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
+
+
+// var containsDuplicate = function(nums) {
+//   for (let index = 0; index < nums.length; index++) {
+//       notCurrent = index != nums.indexOf(nums[index])
+//       if (nums.includes(nums[index]) && notCurrent) {
+//           return true
+//       } 
+//   }
+//   return false
+// };
+
+// var containsDuplicate = function(nums) {
+//         const obj = {}
+//         for (let index = 0; index < nums.length; index++) {
+          
+//           if (obj[nums[index]]) {
+//               return true 
+//           }else{
+//             obj[nums[index]] = true
+//           }
+//         }
+//         return false
+// };
+
+// console.log(containsDuplicate([1,2,3,1]))

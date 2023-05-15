@@ -625,7 +625,7 @@ pigIt('Pig latin is cool') */
 
 // console.log(containsDuplicate([1,2,3,1]))
 
-// Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
+//32 Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.
 
 // var rotate = function(nums, k) {
 //     var RotatedElement = nums.splice(nums.length-k ,k)
@@ -633,3 +633,18 @@ pigIt('Pig latin is cool') */
 //   };
 
 // console.log(rotate([-1,-100,3,99] ,2))
+
+
+//34 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.Note that you must do this in-place without making a copy of the array.
+
+var moveZeroes = function(nums) {
+    debugger
+  for (let index = 0; index < nums.length; index++) {
+    if (nums[index] ===0 ){
+      nums.splice(index,1)
+      nums.push(0)
+    }
+  }
+  return nums
+};
+console.log(moveZeroes([0,1,0,3,12]))

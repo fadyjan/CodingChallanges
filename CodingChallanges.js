@@ -704,3 +704,25 @@ pigIt('Pig latin is cool') */
 // h1.set('grappes',1000)
 // h1.set('aples',2000)
 // console.log(h1.keys())
+
+
+//36 Find number is Duplicate return it , if not return undifeind 
+function FindDuplicate(NumArr){
+  const DummyObj = {}
+  for (let index = 0; index < NumArr.length; index++) {
+    let currentRecord = NumArr[index]
+
+    if (!DummyObj[currentRecord]) {
+      DummyObj[currentRecord] = true
+    }else{
+      return `The number that duplicated is ${currentRecord}`
+    }
+    
+  }
+  return undefined
+}
+
+
+
+
+console.log(FindDuplicate([8,5,6,7,8,9,2]))

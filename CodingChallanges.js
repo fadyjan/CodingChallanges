@@ -707,22 +707,103 @@ pigIt('Pig latin is cool') */
 
 
 //36 Find number is Duplicate return it , if not return undifeind 
-function FindDuplicate(NumArr){
-  const DummyObj = {}
-  for (let index = 0; index < NumArr.length; index++) {
-    let currentRecord = NumArr[index]
+// function FindDuplicate(NumArr){
+//   const DummyObj = {}
+//   for (let index = 0; index < NumArr.length; index++) {
+//     let currentRecord = NumArr[index]
 
-    if (!DummyObj[currentRecord]) {
-      DummyObj[currentRecord] = true
-    }else{
-      return `The number that duplicated is ${currentRecord}`
-    }
+//     if (!DummyObj[currentRecord]) {
+//       DummyObj[currentRecord] = true
+//     }else{
+//       return `The number that duplicated is ${currentRecord}`
+//     }
     
-  }
-  return undefined
-}
+//   }
+//   return undefined
+// }
 
 
 
 
-console.log(FindDuplicate([8,5,6,7,8,9,2]))
+// console.log(FindDuplicate([8,5,6,7,8,9,2]))
+//Hoisting 
+// x = 10 
+// var x  ;
+// console.log(x)
+
+//This keyword
+// object ={
+//   name : "fady",
+//   test :()=>{console.log(this)}
+// }
+// object.test()
+
+// var x=null
+// console.log(x)
+
+
+
+// Coding Interview 
+// let x = "fady'
+// x.sayHello(); // 'hello fady'
+
+
+// class Information {
+//   constructor(name){
+//     this.name = name 
+//   }
+
+//   sayHello (){
+//     console.log(this.name)
+//   }
+// }
+
+
+// let object1 = new Information('fady')
+// object1.sayHello()
+
+// let array = [1,2,3]
+
+// function MyMap(arr , callbackFunc){
+//   const newArray = []
+//   //Get array 
+//   for (let index = 0; index < arr.length; index++) {
+//     newArray.push(callbackFunc(arr[index]))
+    
+//   }
+
+//   return newArray
+
+// }
+
+
+
+// const x = array.map((elem)={
+//       element * 2 
+// })
+
+
+// const shape = {
+//   radius: 10,
+//   diameter() {
+//     return this.radius * 2;
+//   },
+//   perimeter: () => 2 * Math.PI * this.radius
+// };
+
+// console.log(shape.diameter());
+// console.log(shape.perimeter());
+
+// let x = shape.diameter
+// x.call(shape)
+// console.log(x()) 
+
+
+// const a = {};
+// const b = { key: "b" };
+// const c = { key: "c" };
+
+// a[b] = 123;
+// a[c] = 456;
+
+// console.log(a[b]);

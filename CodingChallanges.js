@@ -589,7 +589,7 @@ pigIt('Pig latin is cool') */
 
 // function getMaxSum(arr) {
 //   arr = arr.sort();
- 
+
 //   const SortedSet =new Set(arr);
 //   const filtredArray = [...SortedSet]
 //   return filtredArray[filtredArray.length - 1] + filtredArray[filtredArray.length - 2];
@@ -599,13 +599,12 @@ pigIt('Pig latin is cool') */
 
 // Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
-
 // var containsDuplicate = function(nums) {
 //   for (let index = 0; index < nums.length; index++) {
 //       notCurrent = index != nums.indexOf(nums[index])
 //       if (nums.includes(nums[index]) && notCurrent) {
 //           return true
-//       } 
+//       }
 //   }
 //   return false
 // };
@@ -613,9 +612,9 @@ pigIt('Pig latin is cool') */
 // var containsDuplicate = function(nums) {
 //         const obj = {}
 //         for (let index = 0; index < nums.length; index++) {
-          
+
 //           if (obj[nums[index]]) {
-//               return true 
+//               return true
 //           }else{
 //             obj[nums[index]] = true
 //           }
@@ -633,7 +632,6 @@ pigIt('Pig latin is cool') */
 //   };
 
 // console.log(rotate([-1,-100,3,99] ,2))
-
 
 //34 Given an integer array nums, move all 0's to the end of it while maintaining the relative order of the non-zero elements.Note that you must do this in-place without making a copy of the array.
 
@@ -690,10 +688,10 @@ pigIt('Pig latin is cool') */
 //     const KeysArray =[]
 //     for (let index = 0; index < this.data.length; index++) {
 //       if ((this.data[index])) {
-//         KeysArray.push(this.data[index][0][0]) 
+//         KeysArray.push(this.data[index][0][0])
 
 //       }
-      
+
 //     }
 //     return KeysArray
 //   }
@@ -705,8 +703,7 @@ pigIt('Pig latin is cool') */
 // h1.set('aples',2000)
 // console.log(h1.keys())
 
-
-//36 Find number is Duplicate return it , if not return undifeind 
+//36 Find number is Duplicate return it , if not return undifeind
 // function FindDuplicate(NumArr){
 //   const DummyObj = {}
 //   for (let index = 0; index < NumArr.length; index++) {
@@ -717,17 +714,14 @@ pigIt('Pig latin is cool') */
 //     }else{
 //       return `The number that duplicated is ${currentRecord}`
 //     }
-    
+
 //   }
 //   return undefined
 // }
 
-
-
-
 // console.log(FindDuplicate([8,5,6,7,8,9,2]))
-//Hoisting 
-// x = 10 
+//Hoisting
+// x = 10
 // var x  ;
 // console.log(x)
 
@@ -741,23 +735,19 @@ pigIt('Pig latin is cool') */
 // var x=null
 // console.log(x)
 
-
-
-// Coding Interview 
+// Coding Interview
 // let x = "fady'
 // x.sayHello(); // 'hello fady'
 
-
 // class Information {
 //   constructor(name){
-//     this.name = name 
+//     this.name = name
 //   }
 
 //   sayHello (){
 //     console.log(this.name)
 //   }
 // }
-
 
 // let object1 = new Information('fady')
 // object1.sayHello()
@@ -766,22 +756,19 @@ pigIt('Pig latin is cool') */
 
 // function MyMap(arr , callbackFunc){
 //   const newArray = []
-//   //Get array 
+//   //Get array
 //   for (let index = 0; index < arr.length; index++) {
 //     newArray.push(callbackFunc(arr[index]))
-    
+
 //   }
 
 //   return newArray
 
 // }
 
-
-
 // const x = array.map((elem)={
-//       element * 2 
+//       element * 2
 // })
-
 
 // const shape = {
 //   radius: 10,
@@ -796,8 +783,7 @@ pigIt('Pig latin is cool') */
 
 // let x = shape.diameter
 // x.call(shape)
-// console.log(x()) 
-
+// console.log(x())
 
 // const a = {};
 // const b = { key: "b" };
@@ -807,3 +793,177 @@ pigIt('Pig latin is cool') */
 // a[c] = 456;
 
 // console.log(a[b]);
+
+// First Task :
+
+// Write a function that takes an array of strings of arbitrary dimensionality ([], [][],
+// [][][], etc.) and returns the sum of every separate number in each string in the array.
+
+// // Examples
+// sum(["1", "five", "2wenty", "thr33"])
+// //  36
+
+// sum([["1X2", "t3n"],["1024", "5", "64"]])
+// // 1099
+
+// sum([[["1"], "10v3"], ["738h"], [["s0"], ["1mu4ch3"],"-1s0"]])
+// // 759
+
+// function sum(array) { // O (n+1+n+n) ==> O(n)
+//   array = flattenArray(array) // O (n)
+//   let sumArray = [];
+//   for (let index = 0; index < array.length; index++) { // O(n)
+//       let numbers = detectNumbers(array[index]); //O(1)
+//       sumArray.push(...numbers);
+//   }
+//   return CalculateSum(sumArray); //0(n)
+// }
+
+// //Function Responisble for Convert Multi level arrays into one level
+// function flattenArray(arr) {
+//   let result = [];
+//   arr.forEach(item => {
+//     if (Array.isArray(item)) {
+//       result = result.concat(flattenArray(item));
+//     } else {
+//       result.push(item);
+//     }
+//   });
+//   return result;
+// }
+
+// //Function Responsible for detecting numbers from string
+// function detectNumbers(inputStrings) {
+//   let numbers = inputStrings.match(/-?\d+(\.\d+)?/g);
+//   if (numbers) {
+//     return numbers;
+//   } else {
+//     return ["0"];
+//   }
+// }
+
+// //Function Responsaible for doing summition process
+// function CalculateSum(numArr) {
+//   let sum = 0;
+//   for (let index = 0; index < numArr.length; index++) {
+//     sum += Number(numArr[index]);
+//   }
+//   console.log(sum);
+//   return sum;
+// }
+
+//Objetive is to see if there is a valid path from a start to a destination in a maze.
+// function canExit(maze) {
+//   const RowsNumbers = maze.length;
+//   const ColumnNumbers = maze[0].length;
+
+//   const visited = new Set();
+//   const queue = [{ row: 0, col: 0 }];
+
+//   while (queue.length > 0) {
+//     const { row, col } = queue.shift();
+
+//     // Check if we've reached the exit
+//     if (row === RowsNumbers - 1 && col === ColumnNumbers - 1) {
+//       return true;
+//     }
+
+//     // Mark as visited and enqueue neighbors
+//     if (!visited.has(`${row},${col}`)) {
+//       visited.add(`${row},${col}`);
+//       CheckTopCell(row, col);
+//       CheckBottomCell(row, col);
+//       CheckLeftCell(row, col);
+//       CheckRightCell(row, col);
+//     }
+//   }
+
+//   function CheckTopCell(row, col) {
+//     if (row > 0 && maze[row - 1][col] === 0) {
+//       queue.push({ row: row - 1, col });
+//     }
+//   }
+
+//   function CheckBottomCell(row, col) {
+//     if (row < RowsNumbers - 1 && maze[row + 1][col] === 0) {
+//       queue.push({ row: row + 1, col });
+//     }
+//   }
+
+//   function CheckLeftCell(row, col) {
+//     if (col > 0 && maze[row][col - 1] === 0) {
+//       queue.push({ row, col: col - 1 });
+//     }
+//   }
+
+//   function CheckRightCell(row, col) {
+//     if (col < ColumnNumbers - 1 && maze[row][col + 1] === 0) {
+//       queue.push({ row, col: col + 1 });
+//     }
+//   }
+
+//   return false;
+// }
+
+// const Arr = [
+//   [0, 1, 1, 1, 1, 0, 0],
+//   [0, 0, 0, 0, 1, 0, 0],
+//   [1, 1, 1, 0, 0, 0, 0],
+//   [1, 0, 0, 0, 1, 1, 0],
+//   [1, 1, 1, 1, 1, 1, 0],
+// ];
+// console.log(canExit(Arr));
+// console.log(x)
+
+// var x =10
+
+// let x = 5;
+// let testFunction = () => {
+//   setTimeout(() => {
+//     console.log("1", x);
+//      x = 7;
+//     console.log("2", x);
+//   }, 0);
+// };
+// testFunction();
+// console.log("3", x);
+
+// 3 5
+// 1 7
+// 2 7
+
+// 3 5
+// 1 7
+// 2 7 ()
+
+// let OriginalArr = [1, 2, 3, 4, 5, 3, 6,]
+
+// OriginalArr.filter((number)=> number !== 3)
+
+// const x = { id: 4, name: "aaa" };
+
+// const y = { name: "aaa", id: 4 };
+
+// const compare = (ob1, ob2) => {
+//   debugger;
+
+//   const ObStr1 = JSON.stringify(ob1);
+//   arrStr1 = ObStr1.split("");
+//   arrStr1.sort();
+  
+
+//   const ObStr2 = JSON.stringify(ob2);
+//   arrStr2 = ObStr2.split("");
+//   arrStr2.sort();
+
+//   arrStr1 =arrStr1.join()
+//   arrStr2 =arrStr2.join()
+
+//   if (arrStr1 === arrStr2) {
+//     return "Tamam";
+//   } else {
+//     return "MshTmam";
+//   }
+// };
+
+// console.log(compare(x, y));

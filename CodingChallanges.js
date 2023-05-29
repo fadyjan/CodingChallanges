@@ -973,16 +973,18 @@ pigIt('Pig latin is cool') */
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
 
-function revert (str){
-  const StrArra = str.split('')
-  const length =StrArra.length
-  let ResultArr =[]
-  for (let index = 0; index < length; index++) {
-    let popedChar = StrArra.pop()
-     ResultArr.push(popedChar)
+// function revert (str){
+//   // const StrArra = str.split('')
+//   // const length =StrArra.length
+//   // let ResultArr =[]
+//   // for (let index = 0; index < length; index++) {
+//   //   let popedChar = StrArra.pop()
+//   //    ResultArr.push(popedChar)
     
-  }
-  return ResultArr.join('');
-}
+//   // }
 
-revert('world')
+//   // let ResultArr = str.split('').reverse().join('')
+//   // return ResultArr;
+// }
+
+// console.log(revert('world'))

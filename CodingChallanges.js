@@ -988,20 +988,30 @@ pigIt('Pig latin is cool') */
 // console.log(revert('world'))
 
 //39 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
-function solution(str, ending) {
-  const endingLength = ending.split("").length;
-  let ComparedStr = [];
-  str = str.split("");
-  for (let index = 0; index < endingLength; index++) {
-    ComparedStr.push(str.pop());
-  }
-  ComparedStr = ComparedStr.reverse().join("")
-  if (ComparedStr == ending) {
-    return true;
-  } else {
-    return false;
-  }
-}
+// function solution(str, ending) {
+//   const endingLength = ending.split("").length;
+//   let ComparedStr = [];
+//   str = str.split("");
+//   for (let index = 0; index < endingLength; index++) {
+//     ComparedStr.push(str.pop());
+//   }
+//   ComparedStr = ComparedStr.reverse().join("")
+//   if (ComparedStr == ending) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
 
-console.log(solution("abc", "bc"))// returns true
-// solution('abc', 'd')
+
+// function solution(str, ending) {
+//   const endingLength = ending.length
+//   if(str.split('').slice(-endingLength).join('') ==ending ){
+//     return true 
+//   }else{
+//     return false 
+//   }
+// }
+
+// console.log(solution("abc", "bsc"))// returns true
+// // solution('abc', 'd')

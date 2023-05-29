@@ -950,7 +950,6 @@ pigIt('Pig latin is cool') */
 //   const ObStr1 = JSON.stringify(ob1);
 //   arrStr1 = ObStr1.split("");
 //   arrStr1.sort();
-  
 
 //   const ObStr2 = JSON.stringify(ob2);
 //   arrStr2 = ObStr2.split("");
@@ -968,7 +967,6 @@ pigIt('Pig latin is cool') */
 
 // console.log(compare(x, y));
 
-
 // Complete the solution so that it reverses the string passed into it.
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
@@ -980,7 +978,7 @@ pigIt('Pig latin is cool') */
 //   // for (let index = 0; index < length; index++) {
 //   //   let popedChar = StrArra.pop()
 //   //    ResultArr.push(popedChar)
-    
+
 //   // }
 
 //   // let ResultArr = str.split('').reverse().join('')
@@ -988,3 +986,22 @@ pigIt('Pig latin is cool') */
 // }
 
 // console.log(revert('world'))
+
+//39 Complete the solution so that it returns true if the first argument(string) passed in ends with the 2nd argument (also a string).
+function solution(str, ending) {
+  const endingLength = ending.split("").length;
+  let ComparedStr = [];
+  str = str.split("");
+  for (let index = 0; index < endingLength; index++) {
+    ComparedStr.push(str.pop());
+  }
+  ComparedStr = ComparedStr.reverse().join("")
+  if (ComparedStr == ending) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+console.log(solution("abc", "bc"))// returns true
+// solution('abc', 'd')

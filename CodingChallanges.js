@@ -1015,3 +1015,19 @@ pigIt('Pig latin is cool') */
 
 // console.log(solution("abc", "bsc"))// returns true
 // // solution('abc', 'd')
+
+//40 Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
+
+
+function reverseWords(str) {
+  // Go for it
+  let arr = str.split(' ')
+  result= arr.map((word)=>{
+      return word.split('').reverse().join('')
+  })
+
+  return result.join(' ')
+}
+
+
+console.log(reverseWords('This is an example!'))

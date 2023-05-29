@@ -967,3 +967,22 @@ pigIt('Pig latin is cool') */
 // };
 
 // console.log(compare(x, y));
+
+
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+
+function revert (str){
+  const StrArra = str.split('')
+  const length =StrArra.length
+  let ResultArr =[]
+  for (let index = 0; index < length; index++) {
+    let popedChar = StrArra.pop()
+     ResultArr.push(popedChar)
+    
+  }
+  return ResultArr.join('');
+}
+
+revert('world')

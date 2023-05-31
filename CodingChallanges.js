@@ -1003,13 +1003,12 @@ pigIt('Pig latin is cool') */
 //   }
 // }
 
-
 // function solution(str, ending) {
 //   const endingLength = ending.length
 //   if(str.split('').slice(-endingLength).join('') ==ending ){
-//     return true 
+//     return true
 //   }else{
-//     return false 
+//     return false
 //   }
 // }
 
@@ -1018,16 +1017,123 @@ pigIt('Pig latin is cool') */
 
 //40 Complete the function that accepts a string parameter, and reverses each word in the string. All spaces in the string should be retained.
 
+// function reverseWords(str) {
+//   // Go for it
+//   let arr = str.split(' ')
+//   result= arr.map((word)=>{
+//       return word.split('').reverse().join('')
+//   })
 
-function reverseWords(str) {
-  // Go for it
-  let arr = str.split(' ')
-  result= arr.map((word)=>{
-      return word.split('').reverse().join('')
-  })
+//   return result.join(' ')
+// }
 
-  return result.join(' ')
+// console.log(reverseWords('This is an example!'))
+
+//41 Compare Objects
+// function CompareObjects(obj1,obj2){
+//   obj1 = JSON.stringify(obj1).split('').sort().join('')
+//   obj2 = JSON.stringify(obj2).split('').sort().join('')
+//   if (obj1 === obj2) {
+//     return true
+//   } else {
+//     return false
+//   }
+
+// }
+
+// var obj1 = {name:'fady' , age : undefined ,address :{street : 2 ,appartment : 15}}
+// var obj2 ={age :undefined ,address :{appartment : 15,street : 2 }, name:'fady'}
+// console.log(CompareObjects(obj1,obj2))
+
+//42 guess the out
+
+// const number = 100
+// const string = "Jay"
+// let obj1 = {
+//   value: "a"
+// }
+// let obj2 = {
+//   value: "b"
+// }
+// function change(number, string, obj1, obj2) {
+//     number = number * 10;
+//     string = "Pete";
+//     obj1 = obj2;
+//     obj2.value = "c";
+
+//     console.log(obj1)
+// }
+
+// change(number, string, obj1, obj2);
+
+// //Guess the outputs here before you run the code:
+// console.log(number);
+// console.log(string);
+// console.log(obj1);
+
+// structuredClone()
+// function solution(arr) {
+//   debugger
+//   const seen = new Set(arr);
+
+//   for (let i = 1; i <= arr.length + 1; i++) {
+//     if (!seen.has(i)) return i;
+//   }
+
+//   return 1;
+// }
+
+// function solution(A) {
+//   let dummySet = new Set(A);
+
+//   for (let index = 1; index <= A.length+1; index++) { //O(N)
+//       if(!dummySet.has(index)) { //O(1)
+//         return index
+//       }
+
+//   }
+//   return 1
+// }
+
+// console.log(solution([2,3,4]))
+
+//43 formatDuration
+function formatDuration(seconds) {
+  debugger
+  if (seconds == 0) {
+    return 'now';
+  }
+
+  const units = [
+    { name: 'year', duration: 31536000 },
+    { name: 'day', duration: 86400 },
+    { name: 'hour', duration: 3600 },
+    { name: 'minute', duration: 60 },
+    { name: 'second', duration: 1 }
+  ];
+
+  let parts = [];
+  for (const unit of units) {
+
+    const amount = Math.floor(seconds / unit.duration);
+    if (amount > 0) {
+      parts.push(`${amount} ${unit.name}${amount > 1 ? 's' : ''}`);
+      seconds %= unit.duration;
+    }
+
+  }
+
+  let result = '';
+  if (parts.length === 1) {
+    result = parts[0];
+  } else if (parts.length === 2) {
+    result = `${parts[0]} and ${parts[1]}`;
+  } else {
+    result = parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+  }
+
+  return result;
 }
 
 
-console.log(reverseWords('This is an example!'))
+console.log(formatDuration(15731080))

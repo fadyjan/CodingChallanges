@@ -1098,42 +1098,103 @@ pigIt('Pig latin is cool') */
 // console.log(solution([2,3,4]))
 
 //43 formatDuration
-function formatDuration(seconds) {
-  debugger
-  if (seconds == 0) {
-    return 'now';
-  }
+// function formatDuration(seconds) {
+//   debugger
+//   if (seconds == 0) {
+//     return 'now';
+//   }
 
-  const units = [
-    { name: 'year', duration: 31536000 },
-    { name: 'day', duration: 86400 },
-    { name: 'hour', duration: 3600 },
-    { name: 'minute', duration: 60 },
-    { name: 'second', duration: 1 }
-  ];
+//   const units = [
+//     { name: 'year', duration: 31536000 },
+//     { name: 'day', duration: 86400 },
+//     { name: 'hour', duration: 3600 },
+//     { name: 'minute', duration: 60 },
+//     { name: 'second', duration: 1 }
+//   ];
 
-  let parts = [];
-  for (const unit of units) {
+//   let parts = [];
+//   for (const unit of units) {
 
-    const amount = Math.floor(seconds / unit.duration);
-    if (amount > 0) {
-      parts.push(`${amount} ${unit.name}${amount > 1 ? 's' : ''}`);
-      seconds %= unit.duration;
+//     const amount = Math.floor(seconds / unit.duration);
+//     if (amount > 0) {
+//       parts.push(`${amount} ${unit.name}${amount > 1 ? 's' : ''}`);
+//       seconds %= unit.duration;
+//     }
+
+//   }
+
+//   let result = '';
+//   if (parts.length === 1) {
+//     result = parts[0];
+//   } else if (parts.length === 2) {
+//     result = `${parts[0]} and ${parts[1]}`;
+//   } else {
+//     result = parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
+//   }
+
+//   return result;
+// }
+
+// console.log(formatDuration(15731080))
+
+// var add = (function () {
+//   debugger
+
+//   var factory = function (value) {
+//     var fn = function (num) {
+//       return factory(value + num);
+//     };
+//     // This is the main hack:
+//     // We will return a function that when compared / concatted will call .toString and return a number.
+//     // Never use this in production code...
+//     fn.toString = function () {
+//       return value;
+//     };
+//     return fn;
+//   };
+//   return factory(0);
+// })();
+// add(1)(2)(3)(4)(5);
+
+//44 find LongestConsec
+// function longestConsec(strarr, k) {
+//   let longestConcat = '';
+//   let longestLength = 0;
+
+//   if (k > 0 && k <= strarr.length) { // check if k is valid
+//     for (let i = 0; i <= strarr.length - k; i++) {
+//       const currentConcat = strarr.slice(i, i + k).join('');
+//       const currentLength = currentConcat.length;
+//       if (currentLength > longestLength) {
+//         longestLength = currentLength;
+//         longestConcat = currentConcat;
+//       }
+//     }
+//   }
+
+//   return longestConcat;
+// }
+
+// // Test with the given input
+
+
+// console.log(longestConsec([ 'it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz' ], 15))
+
+
+//45given a string of words, return the length of the shortest word(s).
+
+function findShort(s){
+  const ArrOfStrings = s.split(' ')
+  SmallestFlag = ArrOfStrings[0]
+
+  ArrOfStrings.map((str)=>{
+
+    if (str.length <SmallestFlag.length) {
+      SmallestFlag =str
     }
+  })
 
-  }
-
-  let result = '';
-  if (parts.length === 1) {
-    result = parts[0];
-  } else if (parts.length === 2) {
-    result = `${parts[0]} and ${parts[1]}`;
-  } else {
-    result = parts.slice(0, -1).join(', ') + ' and ' + parts[parts.length - 1];
-  }
-
-  return result;
+  return SmallestFlag
 }
 
-
-console.log(formatDuration(15731080))
+findShort("bitcoin take over the world maybe who knows perhaps")

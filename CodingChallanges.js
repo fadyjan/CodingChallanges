@@ -1177,24 +1177,30 @@ pigIt('Pig latin is cool') */
 
 // // Test with the given input
 
-
 // console.log(longestConsec([ 'it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz' ], 15))
-
 
 //45given a string of words, return the length of the shortest word(s).
 
-function findShort(s){
-  const ArrOfStrings = s.split(' ')
-  SmallestFlag = ArrOfStrings[0]
+// function findShort(s){
+//   const ArrOfStrings = s.split(' ')
+//   SmallestFlag = ArrOfStrings[0]
+//   ArrOfStrings.map((str)=>{
 
-  ArrOfStrings.map((str)=>{
+//     if (str.length <SmallestFlag.length) {
+//       SmallestFlag =str
+//     }
+//   })
 
-    if (str.length <SmallestFlag.length) {
-      SmallestFlag =str
-    }
+//   return SmallestFlag
+// }
+
+//45given a string of words, return the length of the shortest word(s).(Shorter Solution)
+function findShort(s) {
+  let StrArry = s.split(' ')
+  StrArry =StrArry.sort((a,b)=>{
+   return  b.length - a.length
   })
-
-  return SmallestFlag
+ return  StrArry.pop().length
 }
 
-findShort("bitcoin take over the world maybe who knows perhaps")
+findShort("bitcoin take over the world maybe who knows perhaps");
